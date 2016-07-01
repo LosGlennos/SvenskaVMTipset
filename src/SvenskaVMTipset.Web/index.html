@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Angular 2 QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--inject:css-->
+    <link rel="stylesheet" href="/assets/libs/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert/dev/ie9.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert/dev/loader-animation.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert/example/example.css">
+    <link rel="stylesheet" href="/assets/libs/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/libs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert/themes/facebook/facebook.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert/themes/google/google.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert/themes/twitter/twitter.css">
+    <link rel="stylesheet" href="/assets/libs/lodash/vendor/firebug-lite/skin/xp/debugger.css">
+    <link rel="stylesheet" href="/assets/libs/lodash/vendor/firebug-lite/skin/xp/firebug-1.3a2.css">
+    <link rel="stylesheet" href="/assets/libs/lodash/vendor/firebug-lite/skin/xp/firebug.css">
+    <link rel="stylesheet" href="/assets/libs/lodash/vendor/firebug-lite/skin/xp/firebug.IE6.css">
+    <link rel="stylesheet" href="/assets/libs/lodash/vendor/firebug-lite/skin/xp/html.css">
+    <!--endinject-->
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+</head>
+<!-- 3. Display the application -->
+<body>
+    <my-app>Loading...</my-app>
+    <!--inject:js-->
+    <script src="/assets/libs/jquery/dist/jquery.js"></script>
+    <script src="/assets/libs/lodash/lodash.js"></script>
+    <script src="/assets/libs/Chart.js/Chart.js"></script>
+    <script src="/assets/libs/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/assets/libs/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="/app/app.component.js"></script>
+    <script src="/app/main.js"></script>
+    <!--endinject-->
+</body>
+</html>

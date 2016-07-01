@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1A046EBB-DFF8-4EC3-84E5-743D7A535AC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB4BA442-F28B-4A56-A94F-72148FB0FC57}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SvenskaVMTipset", "src\SvenskaVMTipset\SvenskaVMTipset.xproj", "{0577714C-0D6F-492F-92C0-F388C5D06716}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{1505F5AE-8558-495F-83EB-53033916EFA3}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SvenskaVMTipset.Web", "src\SvenskaVMTipset.Web\", "{ACDA50DB-3B31-46B7-8844-E1C144300AEA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51097"
+		Debug.AspNetCompiler.PhysicalPath = "src\SvenskaVMTipset.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51097\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51097"
+		Release.AspNetCompiler.PhysicalPath = "src\SvenskaVMTipset.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51097\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51097"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0577714C-0D6F-492F-92C0-F388C5D06716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0577714C-0D6F-492F-92C0-F388C5D06716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0577714C-0D6F-492F-92C0-F388C5D06716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0577714C-0D6F-492F-92C0-F388C5D06716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACDA50DB-3B31-46B7-8844-E1C144300AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDA50DB-3B31-46B7-8844-E1C144300AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDA50DB-3B31-46B7-8844-E1C144300AEA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDA50DB-3B31-46B7-8844-E1C144300AEA}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0577714C-0D6F-492F-92C0-F388C5D06716} = {1A046EBB-DFF8-4EC3-84E5-743D7A535AC6}
+		{ACDA50DB-3B31-46B7-8844-E1C144300AEA} = {1505F5AE-8558-495F-83EB-53033916EFA3}
+	EndGlobalSection
+EndGlobal

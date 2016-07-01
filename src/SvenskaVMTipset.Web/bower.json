@@ -1,0 +1,32 @@
+{
+  "name": "svenskavmtipset.web",
+  "version": "0.0.0",
+  "authors": [
+    "Martin Svensson"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.5",
+    "fontawesome": "~4.5.0",
+    "lodash": "~4.6.1",
+    "Chart.js": "~1.0.2",
+    "alertifyjs": "~1.0.2",
+    "sweetalert": "~1.1.0"
+  },
+  "overrides": {
+    "alertifyjs": {
+      "main": [
+        "./dist/js/ngAlertify.js",
+        "./dist/css/alertify.css"
+      ]
+    }
+  }
+}
