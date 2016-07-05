@@ -1,0 +1,17 @@
+html, body { height: 100%; }
+  
+body {  
+  display: table;
+  width: 100%; 
+}
+  
+header, footer { 
+  display: table-row;
+  height: 1px; 
+}
+  
+main {
+  display: table-row;
+  height: 100%;
+  margin-top: 50px;
+}
