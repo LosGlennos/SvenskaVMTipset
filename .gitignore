@@ -1,3 +1,5 @@
 *.js
 *.js.map
 node_modules
+src/SvenskaVMTipset/bin
+src/SvenskaVMTipset/obj

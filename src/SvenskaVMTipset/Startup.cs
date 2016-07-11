@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Cors;
 
 namespace SvenskaVMTipset
 {
@@ -36,7 +37,16 @@ namespace SvenskaVMTipset
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
+            
+            services.AddCors(options => 
+            {
+                options.AddPolicy("AllowAll", 
+                p => p.AllowAnyOrigin()
+                      .AllowAnyMethod()
+                      .AllowAnyHeader()
+                      .AllowCredentials());
+            });
+            
             services.AddMvc();
         }
 
@@ -49,7 +59,7 @@ namespace SvenskaVMTipset
             app.UseApplicationInsightsRequestTelemetry();
 
             app.UseApplicationInsightsExceptionTelemetry();
-
+            app.UseCors("AllowAll");
             app.UseMvc();
         }
     }
