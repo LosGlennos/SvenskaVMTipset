@@ -15,11 +15,13 @@ export class LoginComponent {
   constructor(private apiService: ApiService){}
   
   getValues() {
+    let values = [];
     this.apiService.get('values')
                    .subscribe(values => values.forEach(function(value) {
-                     this._values.push(value);
+                     console.log(value);
+                     values.push(value);
                     }));
-    
-    console.log(this._values)
+                    
+    console.log(values);
   }
 }
