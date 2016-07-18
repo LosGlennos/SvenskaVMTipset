@@ -7,7 +7,7 @@ import 'rxjs/Rx'
 export class ApiService {
     constructor(private http: Http) { }
 
-    private baseUrl = 'http://localhost:50924/api/';
+    private baseUrl = 'http://localhost:5000/api/';
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
 
