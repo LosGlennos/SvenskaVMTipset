@@ -1,7 +1,8 @@
 import { bootstrap }    from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app.component';
-import { provideForms } from '@angular/forms'
+import { provideForms, disableDeprecatedForms } from '@angular/forms'
 
 bootstrap(AppComponent, [
-  provideForms()
+    disableDeprecatedForms(),
+    provideForms()
 ]);

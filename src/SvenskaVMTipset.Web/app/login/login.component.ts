@@ -11,7 +11,6 @@ import { HTTP_PROVIDERS } from '@angular/http'
 })
 
 export class LoginComponent {
-  _values = [];
   constructor(private apiService: ApiService){}
   
   getValues() {
@@ -21,7 +20,5 @@ export class LoginComponent {
                      console.log(value);
                      values.push(value);
                     }));
-                    
-    console.log(values);
   }
 }
