@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Cors;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using SvenskaVMTipset.Controllers.Registration;
+using SvenskaVMTipset.DataAccess;
+using SvenskaVMTipset.DataAccess.Repositories;
 
 namespace SvenskaVMTipset
 {
@@ -35,7 +36,9 @@ namespace SvenskaVMTipset
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
+            var connectionString = Configuration.GetSection("ConnectionStrings:" + Environment.MachineName).Value;
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
             services.AddApplicationInsightsTelemetry(Configuration);
             
             services.AddCors(options => 
@@ -48,6 +51,9 @@ namespace SvenskaVMTipset
             });
             
             services.AddMvc();
+
+            services.AddSingleton<IRegisterService, RegisterService>();
+            services.AddSingleton<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
