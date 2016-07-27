@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/common';
 import { LoginModel } from './login.model';
-import { ApiService } from '../shared/api.service'
+import { LoginFormService } from './login-form.service'
 
 @Component({
     selector: 'login-form',
@@ -9,9 +9,9 @@ import { ApiService } from '../shared/api.service'
 })
 export class LoginFormComponent implements OnInit {
     submit = false;
-    loginModel;
+    loginModel: LoginModel;
 
-    constructor(private _apiService: ApiService) {}
+    constructor(private _loginFormService: LoginFormService) {}
 
     ngOnInit() {
         this.loginModel = new LoginModel('', '');
@@ -19,7 +19,6 @@ export class LoginFormComponent implements OnInit {
 
     onSubmit() {
         this.submit = true;
-        this._apiService.post('login', JSON.stringify(this.loginModel))
-            .subscribe(result => console.log(result));
+        this._loginFormService.login(this.loginModel).subscribe(result => console.log(result));;
     }
 }

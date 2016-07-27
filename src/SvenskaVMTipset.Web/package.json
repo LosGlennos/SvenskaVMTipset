@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "font-awesome": "^4.6.3",
     "jquery": "2.2.4",
     "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
