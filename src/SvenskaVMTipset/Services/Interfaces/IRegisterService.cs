@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SvenskaVMTipset.Controllers.Registration
 {
-    interface IRegisterService
+    public interface IRegisterService
     {
         bool RegisterUser(RegisterModel registerModel);
     }

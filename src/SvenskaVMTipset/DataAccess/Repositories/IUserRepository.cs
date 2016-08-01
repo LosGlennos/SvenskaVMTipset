@@ -4,7 +4,7 @@ namespace SvenskaVMTipset.DataAccess.Repositories
 {
     public interface IUserRepository
     {
-        User GetUser(string username);
+        User GetUserByEmail(string email);
         bool AddUser(User user);
     }
 }

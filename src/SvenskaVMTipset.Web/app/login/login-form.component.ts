@@ -19,6 +19,6 @@ export class LoginFormComponent implements OnInit {
 
     onSubmit() {
         this.submit = true;
-        this._loginFormService.login(this.loginModel).subscribe(result => console.log(result));;
+        this._loginFormService.login(this.loginModel).subscribe(result => console.log(result));
     }
 }

@@ -5,9 +5,9 @@ namespace SvenskaVMTipset.Controllers.Registration
     [Route("api/[controller]")]
     public class RegisterController : Controller
     {
-        private readonly RegisterService _registerService;
+        private readonly IRegisterService _registerService;
 
-        public RegisterController(RegisterService registerService)
+        public RegisterController(IRegisterService registerService)
         {
             _registerService = registerService;
         }

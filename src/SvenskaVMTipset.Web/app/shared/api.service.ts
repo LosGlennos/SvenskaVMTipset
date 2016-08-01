@@ -17,7 +17,8 @@ export class ApiService {
             .catch(this.handleError);
     }
 
-    post(url: string, data: string) {
+    post(url: string, data: string): Observable<string[]> {
+        console.log(data);
         return this.http.post(this.baseUrl + url, data, this.options)
             .map(this.extractData)
             .catch(this.handleError);

@@ -12,21 +12,24 @@ namespace SvenskaVMTipset.DataAccess.Repositories
             _dataContext = dataContext;
         }
 
-        public User GetUser(string username)
+        public User GetUserByEmail(string email)
         {
-            return _dataContext.Users.SingleOrDefault(x => x.Username == username);
+            return _dataContext.Users.SingleOrDefault(x => x.Email == email);
         }
 
         public bool AddUser(User user)
         {
             var addedUser =_dataContext.Add(new User
             {
-                Username = user.Username,
+                Email = user.Email,
                 Password = user.Password,
                 Salt = user.Salt
             });
 
-            return addedUser != null;
+            if (addedUser == null) return false;
+
+            _dataContext.SaveChanges();
+            return true;
         }
     }
 }

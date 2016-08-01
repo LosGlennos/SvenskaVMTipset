@@ -5,10 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using SvenskaVMTipset.Controllers.Registration;
 using SvenskaVMTipset.DataAccess;
 using SvenskaVMTipset.DataAccess.Repositories;
+using SvenskaVMTipset.Services;
+using SvenskaVMTipset.Services.Interfaces;
 
 namespace SvenskaVMTipset
 {
@@ -53,7 +54,9 @@ namespace SvenskaVMTipset
             services.AddMvc();
 
             services.AddSingleton<IRegisterService, RegisterService>();
+            services.AddSingleton<ILoginService, LoginService>();
             services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IPasswordService, PasswordService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline

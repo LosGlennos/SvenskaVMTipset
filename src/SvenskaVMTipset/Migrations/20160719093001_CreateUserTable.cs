@@ -17,7 +17,7 @@ namespace SvenskaVMTipset.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Password = table.Column<byte[]>(nullable: false),
                     Salt = table.Column<byte[]>(nullable: false),
-                    Username = table.Column<string>(nullable: false)
+                    Email = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
