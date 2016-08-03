@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/common';
 import { LoginModel } from './login.model';
-import { LoginFormService } from './login-form.service'
+import { LoginFormService } from './login-form.service';
 
 @Component({
     selector: 'login-form',
@@ -19,6 +19,8 @@ export class LoginFormComponent implements OnInit {
 
     onSubmit() {
         this.submit = true;
-        this._loginFormService.login(this.loginModel).subscribe(result => console.log(result));
+        this._loginFormService.login(this.loginModel).subscribe(result => {
+            localStorage.setItem('jwt', result.access_token);
+        });
     }
 }
