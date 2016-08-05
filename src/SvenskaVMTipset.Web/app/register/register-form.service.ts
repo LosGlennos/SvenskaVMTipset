@@ -8,8 +8,6 @@ export class RegisterFormService {
     constructor(private _apiService: ApiService) { }
 
     register(registerModel: RegisterModel) {
-        return this._apiService.post('register', JSON.stringify(registerModel));
+        return this._apiService.post<string[]>('register', JSON.stringify(registerModel));
     }
-
-    Hej() {}
 }
